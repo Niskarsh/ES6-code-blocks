@@ -1,10 +1,5 @@
-class animal {
-    constructor () {
-        this.dog
-    }
-
-    let dog = {
-        name,
-        age
+export default class animal {
+    constructor (dog) {
+        this.dog = dog
     }
 }
