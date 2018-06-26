@@ -1,1 +1,2 @@
-### Class things
+- use ``npm start``
+- Try to understand whats happening in server.js
