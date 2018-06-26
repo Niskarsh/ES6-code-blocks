@@ -3,7 +3,7 @@ import Promise from 'promise'
 
 
 const asyncProcess = () => new Promise( (resolve, reject) => {
-    setTimeout ( resolve('2 secs'), 5000)
+    setTimeout ( () => {resolve('2 secs')}, 10000)
 } )
 
 // asyncProcess().then(val => console.log(val)).catch(e => console.log(`error ${e}`));
