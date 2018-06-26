@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "babel-watch server/server.js"
+    "start": "babel-watch server/prom.js"
   },
   "author": "Niskarsh",
   "license": "ISC",
@@ -15,6 +15,8 @@
     "babel-watch": "^2.0.7"
   },
   "dependencies": {
-    "babel-polyfill": "^6.26.0"
+    "babel-polyfill": "^6.26.0",
+    "co": "^4.6.0",
+    "promise": "^8.0.1"
   }
 }
