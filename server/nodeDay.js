@@ -6,7 +6,7 @@
 // npm
 // using npm to install modules
 // package.json
-// .gitignore
+// node_modules folder
 
 
 import http from 'http'
