@@ -8,23 +8,35 @@
 // middlewares
 // forms
 
-// import express from 'express'
-// import hbs from 'hbs'
+import express from 'express'
+import hbs from 'hbs'
 
-// let app = express()
-// app.set ('view engine', hbs)
-// app.use (express.static(__dirname+'/../public'))
+let app = express()
+app.set ('view engine', hbs)
+app.use (express.static(__dirname+'/../public'))
 
-// const port = process.env.PORT || 3000
+const port = process.env.PORT || 3000
 
-// app.get ('/', (req, res) => {
-//     res.render ('home.hbs')
+// app.use ('/', (req, res, next) => {
+//     console.log('Accessing / route')
+//     next()
 // })
 
-// app.get('/form', (req, res) => {
-//     res.render ('form.hbs')
-// })
+app.get ('/form/:user',(req, res) => {
+    let user = req.params.user
+    res.render ('home.hbs', {
+        name:user
+    })
+})
+
+app.get('/form', (req, res) => {
+    res.render ('form.hbs')
+})
+
+app.post ('/form', (req, res) => {
+    res.redirect ('/form/akhil')
+})
 
 
 
-// app.listen (port, console.log (`Started listening on port ${port}`))
+app.listen (port, console.log (`Started listening on port ${port}`))
